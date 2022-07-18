@@ -3,7 +3,7 @@
 <p>Frontend : Bootstrap</p> 
 <p>Backend  : .NET Core MVC </p>
 <p>Database : MSSQL </p>
-<p>ORM : Entity Framework </p>
+<p>ORM : Entity Framework Core </p>
 <p>Fluent Validation </p>
 <p>.NET CORE Identity </p>
 
