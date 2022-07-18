@@ -1,0 +1,32 @@
+﻿@using EntityLayer.Concrete
+@model List<Product>
+@{
+	ViewData["Title"] = "Ürün Anasayfa";
+	Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered mt-2">
+	<tr>
+		<th>#</th>
+		<th>Adı</th>
+		<th>Fiyatı</th>
+		<th>Stok</th>
+		<th>İşlemler</th>
+	</tr>
+	@foreach (var product in Model)
+	{
+		<tr>
+			<td>@product.ID</td>
+			<td>@product.Name</td>
+			<td>@product.Price</td>
+			<td>@product.Stock</td>
+			<td>
+				<a href="/Product/DeleteProduct/@product.ID/" class="btn btn-danger">Sil</a>
+				<a href="/Product/UpdateProduct/@product.ID/" class="btn btn-warning">Güncelle</a>
+			</td>
+		</tr>
+	}
+</table>
+
+<a href="#" class="btn btn-success">Ürün Ekle</a>
+

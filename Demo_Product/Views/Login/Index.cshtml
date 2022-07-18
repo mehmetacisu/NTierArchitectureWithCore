@@ -1,0 +1,51 @@
+﻿@model Demo_Product.Models.UserLoginViewModel
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>OOP Core - Giriş Yap</title>
+
+	<link rel="stylesheet" href="~/colorlib-regform-8/fonts/material-icon/css/material-design-iconic-font.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+		  rel="stylesheet"
+		  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+		  crossorigin="anonymous">
+	<link rel="stylesheet" href="~/colorlib-regform-8/css/style.css">
+</head>
+<body>
+	<div class="main">
+		<section class="signup">
+			<div class="container">
+				<div class="signup-content">
+					<form method="post" id="signup-form" class="signup-form">
+						<h2 class="form-title">Giriş yap</h2>
+						<div class="form-group">
+							<input type="text" class="form-input" name="username" placeholder="Kullanıcı Adınız" asp-for="Username" />
+							
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-input" name="Password" placeholder="Şifreniz" asp-for="Password" />
+						</div>
+						<div class="text-danger" asp-validation-summary="ModelOnly">
+						</div>
+						<div class="form-group">
+							<input type="submit" name="submit" id="submit" class="form-submit" value="Giriş Yap" />
+						</div>
+					</form>
+					<p class="loginhere">
+						Hesabınız yok mu ? <a href="~/Register/Index/" class="loginhere-link">Üye Olun</a>
+					</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script src="~/colorlib-regform-8/vendor/jquery/jquery.min.js"></script>
+	<script src="~/colorlib-regform-8/js/main.js"></script>
+</body>
+</html>
+

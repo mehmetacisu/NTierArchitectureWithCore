@@ -1,0 +1,21 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered mt-2">
+	<tr>
+		<th>#</th>
+		<th>Ad</th>
+	</tr>
+	@foreach (var category in Model)
+	{
+		<tr>
+			<td>@category.ID</td>
+			<td>@category.Name</td>
+		</tr>
+	}
+</table>
+

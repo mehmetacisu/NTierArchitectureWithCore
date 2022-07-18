@@ -1,0 +1,75 @@
+﻿@model Demo_Product.Models.UserRegisterViewModel
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Kayıt Ol</title>
+
+	<link rel="stylesheet" href="~/colorlib-regform-8/fonts/material-icon/css/material-design-iconic-font.min.css">
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+	  rel="stylesheet" 
+	  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+	  crossorigin="anonymous">
+	<link rel="stylesheet" href="~/colorlib-regform-8/css/style.css">
+</head>
+<body>
+
+	<div class="main">
+		<section class="signup">
+			<div class="container">
+				<div class="signup-content">
+					<form method="post" id="signup-form" class="signup-form">
+						<h2 class="form-title">Hesap Oluştur</h2>
+						<div class="form-group">
+							<input type="text" class="form-input" name="Name" placeholder="Adınız" />
+							<span class="text-danger" asp-validation-for="Name"></span>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-input" name="Surname" placeholder="Soyadınız" />
+							<span class="text-danger" asp-validation-for="SurName"></span>
+							
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-input" name="Mail" placeholder="Mail Adresiniz" />
+							<span class="text-danger" asp-validation-for="Mail"></span>
+							
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-input" name="UserName"  placeholder="Kullanıcı adınız" />
+							<span class="text-danger" asp-validation-for="UserName"></span>
+							</div>
+						<div class="form-group">
+							<input type="text" class="form-input" name="Password" placeholder="Şifreniz" />
+							<span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+							<span class="text-danger" asp-validation-for="Password"></span>
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-input" name="ConfirmPassword" placeholder="Şifre Tekrar" />
+							<span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+						</div>
+						<div class="text-danger" asp-validation-summary="ModelOnly">
+
+						</div>
+						<div class="form-group">
+							<input type="submit" name="submit" id="submit" class="form-submit" value="Kayıt Ol" />
+						</div>
+					</form>
+					<p class="loginhere">
+						Hesabınız var mı ? <a href="#" class="loginhere-link">Giriş yapın</a>
+					</p>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<script src="~/colorlib-regform-8/vendor/jquery/jquery.min.js"></script>
+	<script src="~/colorlib-regform-8/js/main.js"></script>
+</body>
+</html>
+

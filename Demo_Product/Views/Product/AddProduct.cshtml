@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Product
+@{
+	ViewData["Title"] = "Ürün Ekle";
+	Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h1 class="text-center">Ürün Ekleme Formu</h1>
+
+<form method="post">
+	@Html.Label("Ürün Adı")
+	@Html.TextBoxFor(x=>x.Name,new{@class="form-control mb-2"})
+	@Html.ValidationMessageFor(x=>x.Name)
+
+	@Html.Label("Ürün Fiyatı")
+	@Html.TextBoxFor(x=>x.Price,new {@class="form-control mb-2"})
+	@Html.ValidationMessageFor(x=>x.Price)
+
+
+	@Html.Label("Ürün Stok Sayısı")
+	@Html.TextBoxFor(x=>x.Stock,new {@class="form-control mb-2"})
+	@Html.ValidationMessageFor(x=>x.Stock)
+
+
+	<button class="btn btn-success">Ekle</button>
+</form>
