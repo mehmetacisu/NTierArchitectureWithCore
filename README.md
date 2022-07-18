@@ -5,7 +5,7 @@
 <p>Database : MSSQL </p>
 <p>ORM : Entity Framework Core </p>
 <p>Fluent Validation </p>
-<p>.NET CORE Identity </p>
+<p>.NET Core Identity </p>
 
 <hr/>
 
